@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "BROWSER=/opt/firefox/firefox next dev",
-    "build": "next build",
+    "dev": "BROWSER=/opt/firefox/firefox HTTPS=true SSL_CRT_FILE=/etc/mkcert/localhost.pem SSL_KEY_FILE=/etc/mkcert/localhost-key.pem next dev",
+    "build": "next build && next export",
     "start": "next start"
   },
   "dependencies": {
